@@ -17,5 +17,37 @@
         <constructor-arg ref="instrumento"/>
     </bean>
     
+    <bean id="05" class="com.tecsup.spring.model.Musico">
+        <property name="canciones" value="05" />
+    </bean>
+    
+    
+    <bean id="06" class="com.tecsup.spring.model.Piano"/>
+    <bean id="musico6" class="com.tecsup.spring.model.Musico">
+        <property name="instrumento" ref="06" />
+    </bean>
+    
+    <bean id="musico07" class="com.tecsup.spring.model.Musico">
+        <property name="instrumento">
+            <bean class="com.tecsup.spring.model.Instrumento"/>
+        </property>
+    </bean>
+    
+    <bean id="guitarra" class="com.tecsup.spring.model.Guitarra"/>
+    <bean id="piano" class="com.tecsup.spring.model.Piano"/>
+    <bean id="musico08" class="com.tecsup.spring.model.Musico">
+        <property name="instrumentos">
+            <list>
+                <ref bean="guitarra"/>
+                <ref bean="piano"/>
+            </list>
+        </property> 
+    </bean>
+    
+    <bean id="musico09" class="com.tecsup.spring.model.Musico">
+        <property name="instrumentos">
+            <null/>
+        </property> 
+    </bean>
     
 </beans>

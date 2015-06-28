@@ -21,6 +21,9 @@ public class Aplicacion {
         Aplicacion.ejemplo1(cntx);
         Aplicacion.ejemplo2(cntx);
         Aplicacion.ejemplo3(cntx);
+        Aplicacion.ejemplo5(cntx);
+        Aplicacion.ejemplo6(cntx);
+        Aplicacion.ejemplo7(cntx);
 
     }
 
@@ -51,6 +54,59 @@ public class Aplicacion {
         Musico musico = (Musico) cntx.getBean("pancho");
         Instrumento instrumento = (Instrumento) cntx.getBean("instrumento");
 
+        musico.who();
+        System.out.println(musico.getCanciones());
+        musico.getInstrumento().sonido();  
+    }
+    
+    public static void ejemplo5(ApplicationContext cntx) {
+
+        //para acceder a los beans definidos en cualquier metodo se instancia la clase ClassPathXmlApplicationContext.
+        Musico musico = (Musico) cntx.getBean("05");
+        musico.who();
+        System.out.println(musico.getCanciones());
+        
+       
+
+    }
+    
+    public static void ejemplo6(ApplicationContext cntx) {
+
+        //para acceder a los beans definidos en cualquier metodo se instancia la clase ClassPathXmlApplicationContext.
+        Musico musico = (Musico) cntx.getBean("musico6");
+        musico.who();
+        System.out.println(musico.getCanciones());
+        musico.getInstrumento().sonido();   
+       
+
+    }
+    
+    public static void ejemplo7(ApplicationContext cntx) {
+
+        //para acceder a los beans definidos en cualquier metodo se instancia la clase ClassPathXmlApplicationContext.
+        Musico musico = (Musico) cntx.getBean("05");
+        musico.who();
+        System.out.println(musico.getInstrumentos());
+        //musico.getInstrumento().sonido();   
+       
+
+    }
+    
+    public static void ejemplo8(ApplicationContext cntx) {
+
+        //para acceder a los beans definidos en cualquier metodo se instancia la clase ClassPathXmlApplicationContext.
+        Musico musico = (Musico) cntx.getBean("05");
+        musico.who();
+        System.out.println(musico.getCanciones());
+        musico.getInstrumento().sonido();   
+       
+
+    }
+    
+    public static void ejemplo9(ApplicationContext cntx) {
+
+        //para acceder a los beans definidos en cualquier metodo se instancia la clase ClassPathXmlApplicationContext.
+        Musico musico = (Musico) cntx.getBean("05");
         musico.who();
         System.out.println(musico.getCanciones());
         musico.getInstrumento().sonido();   
