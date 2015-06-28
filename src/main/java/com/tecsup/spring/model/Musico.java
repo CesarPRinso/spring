@@ -22,6 +22,13 @@ public class Musico {
     public Musico() {
     }
 
+    public Musico(Instrumento instrumento, int canciones) {
+        this.instrumento = instrumento;
+        this.canciones = canciones;
+    }
+    
+    
+
     public String getNombre() {
         return nombre;
     }

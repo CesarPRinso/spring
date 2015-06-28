@@ -9,4 +9,13 @@
     <bean id="bob" class="com.tecsup.spring.model.Musico">
         <constructor-arg value="5"/>
     </bean>
+    
+    <bean id="instrumento" class="com.tecsup.spring.model.Instrumento"/>
+    
+    <bean id="pancho" class="com.tecsup.spring.model.Musico">
+        <constructor-arg value="12"/>
+        <constructor-arg ref="instrumento"/>
+    </bean>
+    
+    
 </beans>
