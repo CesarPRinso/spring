@@ -15,6 +15,13 @@ public class Musico {
     private Instrumento instrumento;
     private int canciones;
 
+    public Musico(int canciones) {
+        this.canciones = canciones;
+    }
+
+    public Musico() {
+    }
+
     public String getNombre() {
         return nombre;
     }

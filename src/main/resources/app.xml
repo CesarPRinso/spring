@@ -4,5 +4,9 @@
 
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd">
 
-       <bean id="musico" class="com.tecsup.spring.model.Musico"/>
+    <bean id="musico" class="com.tecsup.spring.model.Musico"/>
+       
+    <bean id="bob" class="com.tecsup.spring.model.Musico">
+        <constructor-arg value="5"/>
+    </bean>
 </beans>

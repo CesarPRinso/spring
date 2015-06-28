@@ -13,29 +13,34 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  * @author alumno
  */
 public class Aplicacion {
-    
-    
-    
+
     public static void main(String[] args) {
         ApplicationContext cntx = new ClassPathXmlApplicationContext("app.xml");
         //Persona persona = (Persona) context.getBean("persona");
         Aplicacion.ejemplo1(cntx);
-        
+        Aplicacion.ejemplo2(cntx);
+
     }
-    
-    
-    
+
 //    public static void mensaje ()
 //    {
 //        System.out.println("este es un cambio");
 //    }
-    
     public static void ejemplo1(ApplicationContext cntx) {
-        
+
         //para acceder a los beans definidos en cualquier metodo se instancia la clase ClassPathXmlApplicationContext.
-        Musico musico = (Musico)cntx.getBean("musico");
+        Musico musico = (Musico) cntx.getBean("musico");
         musico.who();
-        
+
     }
-    
+
+    public static void ejemplo2(ApplicationContext cntx) {
+
+        //para acceder a los beans definidos en cualquier metodo se instancia la clase ClassPathXmlApplicationContext.
+        Musico musico = (Musico) cntx.getBean("bob");
+        musico.who();
+        System.out.println(musico.getCanciones());
+
+    }
+
 }
